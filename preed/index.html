@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L'Elisir di Mezzanotte: Il protocollo di restaurazione biologica che sta trasformando migliaia di uomini.">
+    <title>L'Elisir di Mezzanotte - Accesso Esclusivo VIP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; }
+        body { font-family: 'Georgia', serif; background: #0d0d0d; color: #e8d7c3; line-height: 1.6; }
+        
+        header { background: #1a0f2e; border-bottom: 3px solid #d4af37; padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 100%; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 15px; font-weight: bold; color: #d4af37; letter-spacing: 3px; text-transform: uppercase; }
+        .badge { font-size: 9px; color: #ff1493; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        
+        main { max-width: 100%; margin: 0; padding: 0; }
+        
+        .hero { background: linear-gradient(135deg, #1a0f2e 0%, #0d0d0d 100%); padding: 40px 20px; text-align: center; border-bottom: 3px solid #d4af37; }
+        .hero-tag { display: inline-block; background: #d4af37; color: #1a0f2e; padding: 8px 16px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        h1 { font-size: 44px; font-weight: bold; margin-bottom: 10px; color: #d4af37; line-height: 1.2; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 18px; color: #e8d7c3; margin-bottom: 15px; font-weight: bold; }
+        .urgency { font-size: 13px; color: #ff1493; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; margin-bottom: 20px; }
+        
+        .cta-top { display: inline-block; background: #d4af37; color: #1a0f2e; padding: 16px 40px; text-decoration: none; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; border: 2px solid #d4af37; cursor: pointer; animation: glow-gold 2s infinite; }
+        .cta-top:hover { background: #1a0f2e; color: #d4af37; box-shadow: 0 0 20px #d4af37; }
+        @keyframes glow-gold { 0%, 100% { box-shadow: 0 0 5px #d4af37; } 50% { box-shadow: 0 0 20px #d4af37; } }
+        
+        .image-section { padding: 30px 20px; text-align: center; }
+        .image-section img { max-width: 100%; height: auto; border: 3px solid #d4af37; max-height: 400px; object-fit: cover; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        
+        .content { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+        
+        .hook { background: #1a0f2e; border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; font-size: 16px; line-height: 1.8; }
+        .hook strong { color: #d4af37; text-transform: uppercase; }
+        
+        .cta-mid { display: block; background: #d4af37; color: #1a0f2e; padding: 16px 40px; text-decoration: none; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin: 30px 0; transition: all 0.3s; border: 2px solid #d4af37; cursor: pointer; animation: glow-gold 2s infinite; }
+        .cta-mid:hover { background: #1a0f2e; color: #d4af37; box-shadow: 0 0 20px #d4af37; }
+        
+        .testimonials { margin: 30px 0; }
+        .testimonial { background: #1a0f2e; border: 2px solid #d4af37; padding: 20px; margin-bottom: 15px; font-size: 14px; }
+        .testimonial-text { margin-bottom: 10px; font-style: italic; color: #e8d7c3; }
+        .testimonial-author { color: #d4af37; font-weight: bold; font-size: 13px; text-transform: uppercase; }
+        
+        .cta-bottom { display: block; background: #d4af37; color: #1a0f2e; padding: 20px 40px; text-decoration: none; font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin: 40px 0; transition: all 0.3s; border: 2px solid #d4af37; cursor: pointer; animation: glow-gold 2s infinite; }
+        .cta-bottom:hover { background: #1a0f2e; color: #d4af37; box-shadow: 0 0 20px #d4af37; }
+        
+        .disclaimer { background: #1a0f2e; border: 2px solid #ff1493; padding: 20px; margin: 40px 0; font-size: 12px; color: #e8d7c3; line-height: 1.8; }
+        
+        footer { background: #0d0d0d; border-top: 3px solid #d4af37; padding: 30px 20px; }
+        .footer-content { max-width: 900px; margin: 0 auto; }
+        .footer-section { margin-bottom: 20px; }
+        .footer-section h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; color: #d4af37; }
+        .footer-section p { font-size: 12px; color: #e8d7c3; line-height: 1.8; }
+        .footer-links { display: flex; gap: 20px; font-size: 11px; }
+        .footer-links a { color: #e8d7c3; text-decoration: none; }
+        .footer-links a:hover { color: #d4af37; }
+        .footer-bottom { border-top: 1px solid #d4af37; padding-top: 15px; margin-top: 15px; font-size: 10px; color: #666; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 30px; }
+            .subtitle { font-size: 15px; }
+            .cta-top, .cta-mid, .cta-bottom { padding: 14px 30px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo">✦ ELISIR ESCLUSIVO ✦</div>
+        <div class="badge">⚠️ ACCESSO VIP</div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-tag">🔐 PROTOCOLLO RISERVATO</div>
+        <h1>L'Elisir di Mezzanotte</h1>
+        <p class="subtitle">La Restaurazione Biologica Che Sta Trasformando Migliaia Di Uomini</p>
+        <p class="urgency">⏰ SOLO 18 ACCESSI RIMASTI OGGI - ACCESSO IMMEDIATO</p>
+        <a href="https://lp.ednaveia.online/preclick" class="cta-top">ACCEDI AL PROTOCOLLO ESCLUSIVO ADESSO</a>
+    </section>
+
+    <section class="image-section">
+        <img src="img/sale_blu_main.jpg" alt="L'Elisir di Mezzanotte - Restaurazione Biologica">
+    </section>
+
+    <section class="content">
+        <div class="hook">
+            <strong>✦ Cosa Sta Accadendo:</strong> Un minerale raro, estratto dalle profondità geotermiche, possiede proprietà di restaurazione biologica che stanno trasformando la vitalità di migliaia di uomini in tutto il mondo. I grandi laboratori lo sanno. Loro non ne parlano. Perché? Perché minaccia un'industria da miliardi di euro.
+        </div>
+
+        <a href="https://lp.ednaveia.online/preclick" class="cta-mid">SCOPRI IL PROTOCOLLO COMPLETO DI RESTAURAZIONE</a>
+
+        <div class="hook">
+            <strong>💎 I Risultati Sono Reali:</strong> Uomini che avevano perso la speranza stanno sperimentando una trasformazione biologica completa. Non è magia. È scienza. È quello che il tuo corpo stava aspettando da anni.
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="testimonial-text">"La mia vita è completamente diversa. Non sapevo che fosse possibile. Incredibile."</p>
+                <p class="testimonial-author">Stefano, 44 anni - Milano</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Mia moglie dice che sono un uomo nuovo. È come se fossi rinato completamente."</p>
+                <p class="testimonial-author">Giovanni, 50 anni - Roma</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Finalmente qualcosa che funziona davvero. Ho provato tutto. Questo è diverso."</p>
+                <p class="testimonial-author">Paolo, 47 anni - Torino</p>
+            </div>
+        </div>
+
+        <a href="https://lp.ednaveia.online/preclick" class="cta-bottom">SÌ, MOSTRAMI COME FUNZIONA IL PROTOCOLLO</a>
+
+        <div class="disclaimer">
+            <strong>⚠️ CLAUSOLA DI ESCLUSIONE EDUCATIVA:</strong> Questo contenuto è fornito esclusivamente a scopo educativo e informativo. Non sostituisce il parere medico professionale. Consultare sempre un medico qualificato prima di apportare modifiche alla propria salute. I risultati individuali possono variare significativamente. Questo sito non è affiliato a Google Inc. Tutte le informazioni sono fornite "così come sono".
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>C DA SILVA LANCHONETE</h3>
+            <p>Centro di ricerca specializzato in scoperte scientifiche e restaurazione biologica. Avenida Juca Sampaio, 40 - Jacintinho, Maceió - AL, 57.095-110, Brasile.</p>
+            <p style="margin-top: 8px; font-size: 11px;">CNPJ: 39.228.576/0001-46</p>
+        </div>
+        <div class="footer-section">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Termini</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 C DA SILVA LANCHONETE. Tutti i diritti riservati. Contenuto esclusivamente educativo e informativo.</p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://lp.ednaveia.online/pretrack.js?rtkcmpid=69a8d274e1c346ad0611de31"></script>
+
+</body>
+</html>
